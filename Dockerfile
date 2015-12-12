@@ -27,5 +27,5 @@ COPY docker-entrypoint.sh /entrypoint.sh
 COPY apache.conf /etc/apache2/sites-enabled/apache.conf
 COPY server.yaml //usr/src/rs/config/server.yaml
 
-CMD ["apache2-foreground"]
 ENTRYPOINT ["/entrypoint.sh"]
+CMD ["apache2-foreground"]
