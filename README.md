@@ -20,7 +20,8 @@ You can now access your instance on the port 80 of the IP of your container.
 
 ## Accees it from Internet
 
-We recommend the usage of SSL, so the easiest is to modify the `nginx.conf` file.
+We recommend the usage of SSL, so the easiest is to modify the `apache.conf` file, you can find examples [here](https://github.com/fkooman/php-remote-storage/blob/master/contrib/storage.local.conf.ubuntu).
+Rebuild the image once done.
 
 Once it is done, you can connect to the port of the host by adding this line to `docker-compose.yml`:
 ```
@@ -31,8 +32,6 @@ web:
     - "80:80"
 ...
 ```
-
-## Installation
 
 ## Contribute
 
