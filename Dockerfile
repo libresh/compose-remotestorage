@@ -14,7 +14,7 @@ RUN docker-php-ext-install curl pdo_sqlite mbstring
 
 VOLUME /var/www/html
 
-ENV RS_VERSION 0.9.4
+ENV RS_VERSION 0.9.9
 
 RUN curl -o rs.tar.xz -SL https://storage.tuxed.net/fkooman/public/upload/php-remote-storage/php-remote-storage-${RS_VERSION}.tar.xz \
  && ls rs.tar.xz \
