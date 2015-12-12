@@ -20,12 +20,10 @@ RUN curl -o rs.tar.xz -SL https://storage.tuxed.net/fkooman/public/upload/php-re
  && ls rs.tar.xz \
  && tar -xf rs.tar.xz -C /usr/src/ \
  && mv /usr/src/php-remote-storage-${RS_VERSION} /usr/src/rs \
- && cd /usr/src/rs \
- && rm ./config/*.example
+ && cd /usr/src/rs
 
 COPY docker-entrypoint.sh /entrypoint.sh
 COPY apache.conf /etc/apache2/sites-enabled/apache.conf
-COPY server.yaml //usr/src/rs/config/server.yaml
 
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["apache2-foreground"]
