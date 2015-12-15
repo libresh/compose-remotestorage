@@ -18,7 +18,7 @@ docker-compose up
 
 You can now access your instance on the port 80 of the IP of your container.
 
-## Accees it from Internet
+## Access it from the Internet
 
 We recommend the usage of SSL, so the easiest is to modify the `apache.conf` file, you can find examples [here](https://github.com/fkooman/php-remote-storage/blob/master/contrib/storage.local.conf.ubuntu).
 Rebuild the image once done.
