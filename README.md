@@ -2,7 +2,7 @@
 
 An open protocol for per-user storage
 
-![logo](https://rawgit.com/indiehosters/remoteStorage/remotestorage-wide.svg)
+![logo](https://cdn.rawgit.com/remotestorage/design/master/logo-new/icon.svg)
 
 # How to use this image
 
