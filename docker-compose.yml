@@ -1,5 +1,5 @@
 web:
-  image: indiehosters/remotestorage
+  build: .
   volumes:
     - ./config:/var/www/html/config
     - ./data:/var/www/html/data

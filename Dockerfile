@@ -1,6 +1,8 @@
 FROM php:5.6-apache
 
 RUN a2enmod rewrite
+RUN a2enmod ssl
+RUN a2dissite 000-default.conf
 
 RUN apt-get update && apt-get install -y \
       libcurl4-openssl-dev \
@@ -24,6 +26,10 @@ RUN curl -o rs.tar.xz -SL https://storage.tuxed.net/fkooman/public/upload/php-re
 
 COPY docker-entrypoint.sh /entrypoint.sh
 COPY apache.conf /etc/apache2/sites-enabled/apache.conf
+
+# Uncomment these lines to enable SSL
+# COPY cert/cert.pem /etc/ssl/
+# COPY cert/key.pem /etc/ssl/
 
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["apache2-foreground"]

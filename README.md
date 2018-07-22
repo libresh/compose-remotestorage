@@ -11,12 +11,14 @@ The easiest is to use our `docker-compose.yml`.
 Make sure you have [docker-compose](http://docs.docker.com/compose/install/) installed. And then:
 
 ```
-git clone https://github.com/indiehosters/remoteStorage.git
-cd remoteStorage
+git clone https://github.com/libresh/compose-remotestorage.git
+cd compose-remotestorage
 docker-compose up
 ```
 
 You can now access your instance on the port 80 of the IP of your container.
+
+Add a user with `docker-compose exec web php bin/add-user username password`
 
 ## Access it from the Internet
 
@@ -37,4 +39,4 @@ web:
 
 Pull requests are very welcome!
 
-We'd love to hear your feedback and suggestions in the issue tracker: [github.com/indiehosters/remoteStorage/issues](https://github.com/indiehosters/remoteStorage/issues). 
+We'd love to hear your feedback and suggestions in the issue tracker: [github.com/libresh/compose-remotestorage/issues](https://github.com/libres/compose-remotestorage/issues).
