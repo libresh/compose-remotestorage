@@ -1,6 +1,7 @@
 FROM php:5.6-apache
 
 RUN a2enmod rewrite
+RUN a2dissite 000-default.conf
 
 RUN apt-get update && apt-get install -y \
       libcurl4-openssl-dev \
